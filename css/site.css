@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+    background:
+        linear-gradient(135deg,
+            #e8f5e9,
+            #e3f2fd);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 36px;
+    background: white;
+    border-radius: 20px;
+    box-shadow:
+        0 16px 45px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    background: #e8f5e9;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 30px;
+}
+
+.intro {
+    margin: 0 0 28px;
+    line-height: 1.6;
+    color: #607d8b;
+}
+
+label {
+    display: block;
+    margin: 18px 0 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #b0bec5;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 3px solid rgba(76, 175, 80, 0.2);
+    border-color: #4caf50;
+}
+
+button {
+    width: 100%;
+    margin-top: 26px;
+    padding: 14px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: #388e3c;
+}
+
+button:hover {
+    background: #2e7d32;
+}
+
+.message {
+    min-height: 22px;
+    margin: 16px 0 0;
+    text-align: center;
+    color: #c62828;
+}
+
+.dashboard-body {
+    min-height: 100vh;
+    margin: 0;
+    background: #f4f7f5;
+    color: #1f2a24;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    padding: 24px 40px;
+    background: white;
+    border-bottom: 1px solid #dce5df;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 8px;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #5d6c63;
+}
+
+.dashboard-content {
+    width: min(100% - 32px, 900px);
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+.dashboard-card {
+    padding: 28px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(25, 60, 40, 0.08);
+}
+
+.dashboard-card h2 {
+    margin-top: 0;
+}
+
+.apk-details {
+    display: grid;
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.apk-details div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.apk-details dt {
+    font-weight: bold;
+}
+
+.apk-details dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.primary-button,
+.secondary-button,
+.action-grid button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-button {
+    background: #3f8f5f;
+    color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: #34784f;
+}
+
+.secondary-button {
+    background: #edf3ef;
+    color: #294535;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.status-message {
+    min-height: 24px;
+    margin-bottom: 0;
+    color: #5d6c63;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 650px) {
+    .dashboard-header {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .dashboard-content {
+        margin-top: 20px;
+    }
+
+    .apk-details div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feedback-card {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.feedback-card h3 {
+    margin-top: 0;
+}
+
+.feedback-card p {
+    white-space: pre-wrap;
+}
+
+.feedback-card small {
+    display: block;
+    margin-top: 12px;
+}
+
+.feedback-message {
+    display: block;
+    margin-top: 6px;
+    white-space: pre-wrap;
+}
+
+.feedback-status-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #dddddd;
+}
+
+.feedback-status-area label {
+    font-weight: bold;
+}
+
+.feedback-status-select {
+    min-width: 170px;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.feedback-status-message {
+    font-size: 0.9rem;
+}

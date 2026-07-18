@@ -1,13 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FramiOki</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FramiOki Testerportal</title>
+
+  <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
-  <h1>FramiOki</h1>
-  <p>Kreative Stop-Motion-Filme für Kinder – unterstützt durch KI.</p>
-  <p>Unsere Website befindet sich derzeit im Aufbau.</p>
+  <main class="page">
+    <section class="login-card">
+      <div class="logo">
+        FramiOki
+      </div>
+
+      <h1>Testerportal</h1>
+
+      <p class="intro">
+        Melde dich an, um die aktuelle Version
+        von FramiOki herunterzuladen und Feedback
+        zur App zu geben.
+      </p>
+
+      <form id="loginForm">
+        <label for="username">
+          Benutzername
+        </label>
+
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">
+          Passwort
+        </label>
+
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit">
+          Anmelden
+        </button>
+
+        <p id="login-message" class="message" aria-live="polite">
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/site.js"></script>
 </body>
+
 </html>

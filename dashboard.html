@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FramiOki Testerportal</title>
+
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div>
+            <h1>FramiOki Testerportal</h1>
+
+            <p id="welcomeText">
+                Anmeldung wird geprüft …
+            </p>
+        </div>
+
+        <button id="logoutButton" class="secondary-button" type="button">
+            Abmelden
+        </button>
+    </header>
+
+    <main class="dashboard-content">
+
+        <section class="dashboard-card">
+            <h2>Aktuelle FramiOki-Version</h2>
+
+            <p id="apkStatus">
+                APK-Informationen werden geladen …
+            </p>
+
+            <dl id="apkDetails" class="apk-details" hidden>
+
+                <div>
+                    <dt>Dateiname</dt>
+                    <dd id="apkFilename">–</dd>
+                </div>
+
+                <div>
+                    <dt>Dateigröße</dt>
+                    <dd id="apkSize">–</dd>
+                </div>
+
+                <div>
+                    <dt>Bereitgestellt</dt>
+                    <dd id="apkLastModified">–</dd>
+                </div>
+
+            </dl>
+
+            <button id="downloadButton" class="primary-button" type="button" disabled>
+                APK herunterladen
+            </button>
+
+            <p id="downloadStatus" class="status-message">
+            </p>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>Feedback senden</h2>
+
+            <label for="feedbackCategory">
+                Kategorie
+            </label>
+
+            <select id="feedbackCategory">
+                <option value="Bug">
+                    Bug
+                </option>
+
+                <option value="Verbesserung">
+                    Verbesserung
+                </option>
+
+                <option value="Idee">
+                    Idee
+                </option>
+
+                <option value="Sonstiges">
+                    Sonstiges
+                </option>
+            </select>
+
+            <label for="feedbackMessage">
+                Nachricht
+            </label>
+
+            <textarea id="feedbackMessage" rows="6" placeholder="Beschreibe dein Feedback..."></textarea>
+
+            <button id="feedbackButton" class="primary-button" type="button">
+                Feedback senden
+            </button>
+
+            <p id="feedbackStatus" class="status-message"></p>
+        </section>
+
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
